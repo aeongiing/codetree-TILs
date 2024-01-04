@@ -6,7 +6,7 @@ int main() {
     int b=5;
     int temp=a;
     a=b;
-    b=a;
+    b=temp;
     cout<<a<<endl<<b;
     return 0;
 }
