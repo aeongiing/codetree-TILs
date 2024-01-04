@@ -1,5 +1,5 @@
 #include <iostream>
-using namespce std;
+using namespace std;
 
 int main() {
     cout<<3;
