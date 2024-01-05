@@ -12,7 +12,7 @@ int main() {
     else if(a_m<b_m)
         cout << 'B';
     else{
-        if(a_e<b_e){
+        if(a_e>b_e){
             cout << 'A';
         }
         else
