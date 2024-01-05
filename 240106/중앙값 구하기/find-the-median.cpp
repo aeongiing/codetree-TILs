@@ -4,28 +4,20 @@ using namespace std;
 int main() {
     int a, b, c;
     cin >> a >> b >> c;
-    if(a>=b){//a가 가장 크고
-        int temp=a;
-        if(a>=c){//
-            c=temp;
-            a=c;
-        }
-        else{
-            b=temp;
-            a=b;
-        }
+    if(a>=b && a>=c){
+        if(c>=b)
+            b=c;
     }
-    else if(b>=c){
+    else if(b>=a && b>=c){
         if(a>=c){
-            int temp=a;
-            c=temp;
-            a=c;
+            b=a;
         }
-        else{
-            int temp=b;
-            c=temp;
-            c=b;
-        }
+        else
+            b=c;
+    }
+    else{
+        if(a>=b)
+            b=a;
     }
     cout << b;
     return 0;
