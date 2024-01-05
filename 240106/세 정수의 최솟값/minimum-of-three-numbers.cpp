@@ -5,20 +5,13 @@ int main() {
     int a, b, c;
     cin >> a >> b >> c;
 
-    if(a<=b){
-        if(a<=c){
-            cout << a;
-        }
+    if(a<=b && a<=c){
+        cout << a;
     }
-    else if(b<=a){
-        if(b<=c){
-            cout << b;
-        }
+    else if(b<=a && b<=c){
+        cout << b;
     }
-    else if(c<=a){
-        if(c<=b){
-            cout << c;
-        }
-    }
+    else 
+        cout << c;
     return 0;
 }
