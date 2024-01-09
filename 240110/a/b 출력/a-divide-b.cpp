@@ -8,7 +8,7 @@ int main() {
     for(int i=0; i<20; i++){
         a*=10;
         cout<<a/b;
-        a-=(a/b)*b;
+        a-=a/b*b;
     }
     
     return 0;
