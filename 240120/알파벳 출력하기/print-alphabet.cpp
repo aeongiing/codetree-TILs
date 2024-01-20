@@ -9,7 +9,7 @@ int main() {
         for(int j=0; j<i+1; j++){
             cout << c;
             (int)c++;
-            if((int)c==65+26+1){
+            if((int)c==(int)'Z'+1){
                 c='A';
             }
         }
