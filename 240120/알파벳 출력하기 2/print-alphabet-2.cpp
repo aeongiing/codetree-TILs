@@ -12,6 +12,9 @@ int main() {
         for(int j=i; j<n; j++){
             cout << (char)cnt << " ";
             (int)cnt++;
+            if((int)cnt==(int)'Z'+1){
+                cnt='A';
+            }
         }
         cout << endl;
     }
