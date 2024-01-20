@@ -10,7 +10,7 @@ int main() {
             cout << "  ";
         }
         for(int j=i; j<n; j++){
-            cout << cnt << " ";
+            cout << (char)cnt << " ";
             (int)cnt++;
         }
         cout << endl;
