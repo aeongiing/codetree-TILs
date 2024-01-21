@@ -15,15 +15,9 @@ int main() {
             break;
         }
     }
-    if(num==10){
-        cout << sum << " " << fixed << (double)sum/10;
-    }
-    else{
-        double avg=(double)sum/num;
-        cout.precision(1);
-        cout << sum << " " << fixed << avg;
-    }
-    
+    cout.precision(1);
+    double avg=(double)sum/num;
+    cout << sum << " " << fixed << avg;
     
     return 0;
 }
