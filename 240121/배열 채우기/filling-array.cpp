@@ -11,6 +11,11 @@ int main() {
             }
             break;
         }
+        else if(i==9){
+            for(int j=9; j>=0; j--){
+                cout << arr[j] << " ";
+            }
+        }
     }
     return 0;
 }
