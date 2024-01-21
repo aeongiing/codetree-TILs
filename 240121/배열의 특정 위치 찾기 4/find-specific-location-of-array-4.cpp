@@ -14,6 +14,14 @@ int main() {
                     sum+=arr[j];
                 }
             }
+            break;
+        }
+        if(i==9){
+            for(int j=0; j<10; j++){
+                num++;
+                sum+=arr[j];
+            }
+            
         }
     }
     cout << num << " " << sum;
