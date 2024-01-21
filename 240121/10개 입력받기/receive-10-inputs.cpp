@@ -16,6 +16,7 @@ int main() {
         else{
             double avg=(double)sum/num;
             cout << sum << " " << fixed << avg;
+            break;
         }
         if(i==9){
             double avg=(double)sum/num;
