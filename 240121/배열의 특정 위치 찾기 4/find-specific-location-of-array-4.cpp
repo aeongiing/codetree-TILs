@@ -18,8 +18,11 @@ int main() {
         }
         if(i==9){
             for(int j=0; j<10; j++){
-                num++;
-                sum+=arr[j];
+                if(arr[j]%2==0){
+                    num++;
+                    sum+=arr[j];
+                }
+                
             }
             
         }
