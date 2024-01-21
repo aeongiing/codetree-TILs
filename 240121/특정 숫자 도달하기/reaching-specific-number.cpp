@@ -9,15 +9,21 @@ int main() {
         cin >> arr[i];
         if(arr[i]<250){
             sum+=arr[i];
+            num=i+1;
         }
-        else{
-            num=i;
+        else if(arr[i]>=250){
             break;
         }
     }
-    double avg=(double)sum/num;
-    cout.precision(1);
-    cout << sum << " " << fixed << avg;
+    if(num==10){
+        cout << sum << " " << fixed << (double)sum/10;
+    }
+    else{
+        double avg=(double)sum/num;
+        cout.precision(1);
+        cout << sum << " " << fixed << avg;
+    }
+    
     
     return 0;
 }
