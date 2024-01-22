@@ -5,6 +5,10 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
+    if(n==0){
+        cout << 0;
+        return 0;
+    }
     int arr[n];
     int min=INT_MAX;
     int max=0;
