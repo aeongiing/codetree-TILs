@@ -12,16 +12,20 @@ int main() {
     for(int i=0; i<n2; i++){
         cin >> b[i];
     }
-    int idx=0;
-    for(int i=0; i<n1; i++){
-        if(a[i]==b[idx]){
-            idx++;
-        }
-        else{
+    int i;
+    int cnt=0;
+    for(i=0; i<n1; i++){
+        if(a[i]==b[0]){
+            cnt=1;
             break;
         }
     }
-    if(idx==n2){
+    for(int j=1; j<n2; j++){
+        while(a[i+j]==b[j]){
+            cnt++;
+        }
+    }
+    if(cnt==n2){
         cout << "Yes";
     }
     else{
