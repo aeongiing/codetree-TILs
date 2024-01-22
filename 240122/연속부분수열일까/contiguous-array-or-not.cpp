@@ -23,13 +23,10 @@ int main() {
                 }
                 else{
                     idx++;
-                    break;
                 }
-
+                break;
             }
-            
         }
-
     }
     if(idx==0){
         cout << "No";
