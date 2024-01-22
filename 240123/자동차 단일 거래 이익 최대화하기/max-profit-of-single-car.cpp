@@ -7,24 +7,35 @@ int main() {
     cin >> n;
     int arr[n];
     int min=INT_MAX;
-    int max=0;
-    for(int i=0; i<n; i++){
-        cin >> arr[i];
-        if(arr[i]<min){
-            min=arr[i];
-        }
-    }
     int idx;
     for(int i=0; i<n; i++){
-        if(arr[i]==min){
-            idx=i;
+        cin >> arr[i];
+    }
+    int minus[n-1];
+    for(int i=0; i<n; i++){
+        int max=0;
+        for(int j=i; j<n; j++){
+            if(arr[j]>=max){
+                max=arr[j];
+            }
+        }
+        minus[i]=max-arr[i];
+
+    }
+    int maximum=0;
+    for(int i=0; i<n-1; i++){
+        if(minus[i]>maximum){
+            maximum=minus[i];
         }
     }
-    for(int j=idx; j<n; j++){
-        if(arr[j]>max){
-            max=arr[j];
-        }
+    if(maximum<=0){
+        cout << 0;
     }
-    cout << max-min;
+    else{
+        cout << maximum;
+    }
+
+
+
     return 0;
 }
