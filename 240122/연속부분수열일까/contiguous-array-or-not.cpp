@@ -18,17 +18,20 @@ int main() {
         if(a[i]==b[0]){
             for(int j=0; j<n2; j++){
                 c[j]=a[i+j];
-                if(b[j]!=c[j]){
-                    continue;
+                if(b[j]==c[j]){
+                    idx++;
                 }
                 else{
-                    idx++;
+                    break;
                 }
                 break;
             }
+            
         }
+        continue;
     }
-    if(idx==0){
+
+    if(idx!=n2){
         cout << "No";
     }
     else if(idx==n2){
