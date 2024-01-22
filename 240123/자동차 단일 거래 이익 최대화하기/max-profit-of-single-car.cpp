@@ -5,10 +5,6 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    if(n==0){
-        cout << 0;
-        return 0;
-    }
     int arr[n];
     int min=INT_MAX;
     int max=0;
@@ -24,11 +20,11 @@ int main() {
             idx=i;
         }
     }
-    for(int j=idx+1; j<n; j++){
-            if(arr[j]>max){
-                max=arr[j];
-            }
+    for(int j=idx; j<n; j++){
+        if(arr[j]>max){
+            max=arr[j];
         }
+    }
     cout << max-min;
     return 0;
 }
