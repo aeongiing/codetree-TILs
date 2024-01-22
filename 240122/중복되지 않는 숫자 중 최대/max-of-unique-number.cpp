@@ -9,11 +9,17 @@ int main() {
     for(int i=0; i<n; i++){
         cin >> arr[i];
     }
+    
     for(int i=n-1; i>=0; i--){
+        int cnt=0;
         for(int j=0; j<i; j++){
             if(arr[j]==arr[i]){
-                arr[j]=arr[i]=0;
+                arr[j]=0;
+                cnt++;
             }
+        }
+        if(cnt>=1){
+            arr[i]=0;
         }
     }
     for(int i=0; i<n; i++){
