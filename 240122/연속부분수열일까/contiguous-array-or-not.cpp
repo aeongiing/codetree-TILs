@@ -31,7 +31,7 @@ int main() {
             }
         }
     }
-    cout << idx << endl;
+    //cout << idx << endl;
     if(idx==n2){
         cout << "Yes";
     }
