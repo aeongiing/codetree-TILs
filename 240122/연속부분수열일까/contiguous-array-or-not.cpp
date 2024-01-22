@@ -12,7 +12,7 @@ int main() {
     for(int i=0; i<n2; i++){
         cin >> b[i];
     }
-    int c[n2];
+    int c[n2]={};
     int idx=0;
     for(int i=0; i<n1; i++){
         if(a[i]==b[0]){
@@ -22,20 +22,21 @@ int main() {
                     idx++;
                 }
                 else{
+                    idx=0;
                     break;
                 }
-                break;
+                if(idx==n2){
+                    break;
+                }
             }
-            
         }
-        continue;
     }
-
-    if(idx!=n2){
-        cout << "No";
-    }
-    else if(idx==n2){
+    cout << idx << endl;
+    if(idx==n2){
         cout << "Yes";
+    }
+    else{
+        cout << "No";
     }
 
 
