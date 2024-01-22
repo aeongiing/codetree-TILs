@@ -21,8 +21,11 @@ int main() {
         }
     }
     for(int j=1; j<n2; j++){
-        while(a[i+j]==b[j]){
+        if(a[i+j]==b[j]){
             cnt++;
+        }
+        else{
+            break;
         }
     }
     if(cnt==n2){
