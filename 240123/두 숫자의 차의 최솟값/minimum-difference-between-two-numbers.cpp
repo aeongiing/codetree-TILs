@@ -11,6 +11,7 @@ int main() {
     int minus[n];
     for(int i=0; i<n; i++){
         int min=100;
+        int m;
         for(int j=0; j<n; j++){
             if(arr[i]>arr[j]){
                 m=arr[i]-arr[j];
@@ -18,18 +19,18 @@ int main() {
             else{
                 m=arr[j]-arr[i];
             }
-            if(m<=min){
+            if(m<=min && m!=0){
                 min=m;
             }
         }
         minus[i]=min;
     }
-    int min=100;
+    int minimum=100;
     for(int i=0; i<n; i++){
-        if(minus[i]<min){
-            min=minus[i];
+        if(minus[i]<=minimum){
+            minimum=minus[i];
         }
     }
-    cout << min;
+    cout << minimum;
     return 0;
 }
