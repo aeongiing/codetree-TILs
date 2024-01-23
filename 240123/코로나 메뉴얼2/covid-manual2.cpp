@@ -1,27 +1,30 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    char a;
-    int b;
-    int acounter=0,bcounter=0,ccounter=0,dcounter=0;
-    for(int i=0;i<3;i++){
-        cin>>a>>b;
-        if(a=='Y'&&b>=37){
-            acounter++;
+
+int main() {
+    int cnt[4]={};
+    for(int i=0; i<3; i++){
+        char c[3];
+        int arr[3];
+        cin >> c[i] >> arr[i];
+        if(c[i]=='Y' && arr[i]>=37){
+            cnt[0]++;
         }
-        else if(b>=37&&a=='N'){
-            bcounter++;
+        else if(c[i]=='N' && arr[i]>=37){
+            cnt[1]++;
         }
-        else if(a=='Y'&&b<37){
-            ccounter++;
+        else if(c[i]=='Y' && arr[i]<37){
+            cnt[2]++;
         }
         else{
-            dcounter++;
+            cnt[3]++;
         }
     }
-    cout<<acounter<<" "<<bcounter<<" "<<ccounter<<" "<<dcounter;
-    if(acounter>=2){
-        cout<<" E";
+    for(int i=0; i<4; i++){
+        cout << cnt[i] << " ";
+    }
+    if(cnt[0]>=2){
+        cout << "E";
     }
     return 0;
 }
