@@ -1,30 +1,31 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int n;
-    cin >> n;
-    int arr[n];
-    for(int i=0; i<n; i++){
-        cin >> arr[i];
+int main(){
+    int num;
+    int max=-1;
+    int save;
+    int Arr[1000];
+    cin>>num;
+    for(int i=0;i<num;i++){
+        cin>>Arr[i];
     }
-    int idx=n+1;
-    
-    while(idx!=1){
-        int max=0;
-        for(int i=0; i<n; i++){
-            if(arr[i]>max){
-                max=arr[i];
-            }
+    for(int i=0;i<num;i++){
+        if(Arr[i]>max){
+            max=Arr[i];
+            save=i+1;
         }
-        for(int j=0; j<n; j++){
-            if(arr[j]==max){
-                idx=j+1;
-                n=idx-1;
-                cout << idx << " ";
-                break;
-            }
+    }
+    cout<<save<<" ";
+    max=-1;
+    while(save!=1){
+        for(int i=0;i<save-1;i++){
+        if(Arr[i]>max){
+            max=Arr[i];
+            save=i+1;
         }
+        cout<<save<<" ";
+    }
     }
     return 0;
 }
