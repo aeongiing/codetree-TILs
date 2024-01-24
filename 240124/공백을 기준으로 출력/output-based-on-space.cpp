@@ -18,6 +18,7 @@ int main() {
             cnt++;
         }
     }
+    str3[str3.length()-cnt]='\0';
     for(int i=0; i<str3.length()-cnt; i++){
         cout << str3[i];
     }
