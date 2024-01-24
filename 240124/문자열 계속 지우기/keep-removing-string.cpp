@@ -8,7 +8,7 @@ int main() {
     
     while(A.find(B)!=string::npos){
         int start_index=A.find(B);
-        A.erase(start_index, start_index+B.length());
+        A.erase(start_index, B.length());
     }
     cout << A << endl;
     
