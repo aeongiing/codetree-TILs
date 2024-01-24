@@ -11,8 +11,11 @@ int main() {
             cout << str[str.length()-1-i];
         }
     }
-    for(int i=0; i<a; i++){
-        cout << str[str.length()-i-1];
+    else{
+        for(int i=0; i<a; i++){
+            cout << str[str.length()-i-1];
+        }        
     }
+
     return 0;
 }
