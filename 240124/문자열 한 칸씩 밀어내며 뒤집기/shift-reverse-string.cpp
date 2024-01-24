@@ -18,10 +18,12 @@ int main() {
             cout << s << endl;
         }
         else if(quest==3){
-            for(int i=0; i<s.length(); i++){
-                cout << s[s.length()-i-1];
+            for(int i=0; i<s.length()/2; i++){
+                char temp=s[i];
+                s[i]=s[s.length()-i-1];
+                s[s.length()-i-1]=temp;
             }
-            cout << endl;
+            cout << s << endl;
         }
     }
     return 0;
