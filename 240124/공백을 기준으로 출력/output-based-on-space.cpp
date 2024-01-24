@@ -6,22 +6,12 @@ int main() {
     string str1, str2;
     getline(cin, str1);
     getline(cin, str2);
-    string str3=str1+str2;
+    string str=str1+str2;
 
-    int cnt=0;
-
-    for(int i=0; i<str3.length(); i++){
-        if(str3[i]==' '){
-            cnt++;
-            for(int j=i; j<str3.length(); j++){
-                str3[j]=str3[j+1];
-            }
-            
+    for(int i=0; i<str.length(); i++){
+        if(str[i]!=' '){
+            cout << str[i];
         }
     }
-    str3[str3.length()-cnt]='\0';
-    for(int i=0; i<str3.length()-cnt; i++){
-        cout << str3[i];
-    }
-    return 0;
+    
 }
