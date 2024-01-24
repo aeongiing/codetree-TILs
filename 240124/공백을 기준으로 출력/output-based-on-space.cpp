@@ -12,10 +12,11 @@ int main() {
 
     for(int i=0; i<str3.length(); i++){
         if(str3[i]==' '){
+            cnt++;
             for(int j=i; j<str3.length(); j++){
                 str3[j]=str3[j+1];
             }
-            cnt++;
+            
         }
     }
     str3[str3.length()-cnt]='\0';
