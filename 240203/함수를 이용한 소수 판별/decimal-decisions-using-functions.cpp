@@ -14,8 +14,12 @@ int main() {
     int a, b;
     cin >> a >> b;
     int sum=0;
+    
     for(int i=a; i<=b; i++){
-        if(IsPrime(i)){
+        if(b==1){
+        cout << 1;
+        }
+        else if(IsPrime(i)){
             sum+=i;
         }
     }
