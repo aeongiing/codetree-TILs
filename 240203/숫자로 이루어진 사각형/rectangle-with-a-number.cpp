@@ -6,7 +6,10 @@ void PrintRect(int n){
         for(int j=1; j<=n; j++){
             int k=n*i+j;
             if(k>=10){
-                k=k%10+1;
+                k=k%9;
+                if(k==0){
+                    k=9;
+                }
             }
             cout << k << " ";
         }
