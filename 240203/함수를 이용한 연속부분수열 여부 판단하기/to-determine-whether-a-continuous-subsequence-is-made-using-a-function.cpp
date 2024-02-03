@@ -6,15 +6,19 @@ bool IsPart(int n1, int n2, int a[], int b[]){
         if(a[i]==b[0]){
             int cnt=1;
             for(int j=1; j<n2; j++){
-                if(a[i+j]!=b[j]){
-                    break;
-                }
-                else{
+                if(a[i+j]==b[j]){
                     cnt++;
                 }
+                else{
+                    cnt=0;
+                    break;
+                }
+            }
+            if(cnt==0){
+                continue;
             }
             if(cnt==n2){
-               return true; 
+                return true; 
             }
             else{
                 return false;
@@ -24,6 +28,7 @@ bool IsPart(int n1, int n2, int a[], int b[]){
             continue;
         }
     }
+
     return false;
     
 }
