@@ -2,7 +2,7 @@
 using namespace std;
 
 bool IsExist(int y, int m, int d){
-    if(y%4==0 || (y%4==0 && y%100!=0) || (y%4==0 && y%100==0 && y%400==0)){
+    if((y % 4 == 0 && y % 100 != 0) || (y % 400 == 0)){
         if(m==2){
             if(d<=29){
                 return true;
