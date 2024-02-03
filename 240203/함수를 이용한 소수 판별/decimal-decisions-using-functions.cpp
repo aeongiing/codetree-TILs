@@ -16,10 +16,7 @@ int main() {
     int sum=0;
     
     for(int i=a; i<=b; i++){
-        if(b==1){
-        cout << 1;
-        }
-        else if(IsPrime(i)){
+        if(IsPrime(i) && b!=1){
             sum+=i;
         }
     }
