@@ -2,18 +2,18 @@
 using namespace std;
 
 bool IsPart(int n1, int n2, int a[], int b[]){
-    
     for(int i=0; i<n1; i++){
-        
         if(a[i]==b[0]){
-            int cnt=0;
+            int cnt=1;
             for(int j=1; j<n2; j++){
                 if(a[i+j]!=b[j]){
                     break;
                 }
-                cnt++;
+                else{
+                    cnt++;
+                }
             }
-            if(cnt+1==n2){
+            if(cnt==n2){
                return true; 
             }
             else{
@@ -21,7 +21,7 @@ bool IsPart(int n1, int n2, int a[], int b[]){
             }
         }
         else{
-            return false;
+            continue;
         }
     }
     
