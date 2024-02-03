@@ -4,8 +4,9 @@ using namespace std;
 bool IsPart(int n1, int n2, int a[], int b[]){
     
     for(int i=0; i<n1; i++){
-        int cnt=0;
+        
         if(a[i]==b[0]){
+            int cnt=0;
             for(int j=1; j<n2; j++){
                 if(a[i+j]!=b[j]){
                     break;
@@ -19,7 +20,9 @@ bool IsPart(int n1, int n2, int a[], int b[]){
                 return false;
             }
         }
-        
+        else{
+            return false;
+        }
     }
     
 }
