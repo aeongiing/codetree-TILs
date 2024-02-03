@@ -9,6 +9,12 @@ bool IsExist(int y, int m, int d){
             }
             return false;
         }
+        else if(m<=7 && m%2!=0){
+            if(d<=31){
+                return true;
+            }
+            return false;
+        }
         else if(m<=7 && m%2==0){
             if(d<=30){
                 return true;
@@ -30,7 +36,19 @@ bool IsExist(int y, int m, int d){
         return false;
     }
     else{
-        if(m<=7 && m%2==0){
+        if(m==2){
+            if(d<=28){
+                return true;
+            }
+            return false;
+        }
+        else if(m<=7 && m%2!=0){
+            if(d<=31){
+                return true;
+            }
+            return false;
+            }
+        else if(m<=7 && m%2==0){
             if(d<=30){
                 return true;
             }
