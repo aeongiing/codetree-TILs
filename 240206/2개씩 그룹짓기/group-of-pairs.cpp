@@ -10,7 +10,7 @@ int main() {
         cin >> arr[i];
     }
     sort(arr, arr+2*n);
-    cout << arr[n]+arr[n-1];
+    cout << arr[n*2-2]+arr[1];
 
 
     return 0;
