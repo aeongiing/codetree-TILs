@@ -6,11 +6,18 @@ int main() {
     int n;
     cin >> n;
     int arr[2*n];
+    int sum=0;
     for(int i=0; i<2*n; i++){
         cin >> arr[i];
+        sum+=arr[i];
     }
     sort(arr, arr+2*n);
-    cout << arr[n*2-2]+arr[1];
+    for(int i=0; i<2*n; i++){
+        if(arr[i]>=sum/(2*n)){
+            cout << arr[i]+arr[i+1];
+            break;
+        }
+    }
 
 
     return 0;
