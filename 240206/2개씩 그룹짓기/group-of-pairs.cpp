@@ -11,10 +11,10 @@ int main() {
         cin >> arr[i];
         sum+=arr[i];
     }
-    sort(arr, arr+2*n);
+    sort(arr, arr+(2*n));
     for(int i=0; i<2*n; i++){
-        if(arr[i]>=sum/(2*n)){
-            cout << arr[i]+arr[i+1];
+        if(arr[i]>=(double)sum/(2*n)){
+            cout << arr[i]+arr[i-1];
             break;
         }
     }
