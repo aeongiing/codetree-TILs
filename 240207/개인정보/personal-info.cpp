@@ -38,13 +38,15 @@ int main() {
     sort(p, p+5, cmp1);
     cout << "name" << endl;
     for(int i=0; i<5; i++){
-        cout << p[i].name << " " << p[i].height << " " << p[i].weight << endl;
+        cout.precision(1);
+        cout << p[i].name << " " << p[i].height << " " << fixed << p[i].weight << endl;
     }
     cout << endl;
     sort(p, p+5, cmp2);
     cout << "height" << endl;
     for(int i=0; i<5; i++){
-        cout << p[i].name << " " << p[i].height << " " << p[i].weight << endl;
+        cout.precision(1);
+        cout << p[i].name << " " << p[i].height << " " << fixed << p[i].weight << endl;
     }
 
     return 0;
