@@ -30,11 +30,12 @@ int main() {
             D=i;
         }
     }
-    if(D>=dday){
-        cout << elapsed_days/7+1;
-    }
-    else{
-        cout << elapsed_days/7;
+    if (D >= 0) {
+        int count = elapsed_days / 7;
+        if (D >= dday) {
+            count++;
+        }
+        cout << count;
     }
     return 0;
 }
