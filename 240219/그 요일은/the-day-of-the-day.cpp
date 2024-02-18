@@ -32,7 +32,7 @@ int main() {
     }
     if (D >= 0) {
         int count = elapsed_days / 7;
-        if (D >= dday) {
+        if ((D + 1) % 7 >= elapsed_days % 7) {
             count++;
         }
         cout << count;
