@@ -9,7 +9,7 @@ int main() {
     cin >> day;
 
     int num_of_days[13] = {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    int elapsed_days=0;
+    int elapsed_days=1;
     while(true) {
         if(m1 == m2 && d1 == d2)
             break;
