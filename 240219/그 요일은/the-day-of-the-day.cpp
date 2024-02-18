@@ -23,19 +23,12 @@ int main() {
         }
     }
     int dday=elapsed_days%7;
-    string day_array[7]={"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
-    int D;
-    for(int i=0; i<7; i++){
-        if(day==day_array[i]){
-            D=i;
-        }
+    if(dday==0){
+        cout << elapsed_days/7;
     }
-    if (D >= 0) {
-        int count = elapsed_days / 7;
-        if ((D + 1) % 7 >= elapsed_days % 7) {
-            count++;
-        }
-        cout << count;
+    else{
+        cout << elapsed_days/7+1;
     }
+    
     return 0;
 }
