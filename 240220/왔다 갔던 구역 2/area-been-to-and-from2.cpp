@@ -15,18 +15,18 @@ int main() {
             x+=1000;
             for(int j=cur_index; j<x; j++){
                 array[j]++;
-                cout << j << " ";
+                //cout << j << " ";
             }
-            cout << endl;
+            //cout << endl;
             cur_index+=x-1000;
         }
         else if(dir=='L'){
             x=1000-x;
             for(int j=cur_index; j>x; j--){
                 array[j]++;
-                cout << j << " ";
+                //cout << j << " ";
             }
-            cout << endl;
+            //cout << endl;
             cur_index-=1000-x;
         }
 
