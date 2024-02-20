@@ -12,22 +12,18 @@ int main() {
     for(int i=0; i<n; i++){
         cin >> x >> dir;
         if(dir=='R'){
-            x+=1000;
+            x+=cur_index;
             for(int j=cur_index; j<x; j++){
                 array[j]++;
-                //cout << j << " ";
             }
-            //cout << endl;
-            cur_index+=x-1000;
+            cur_index=x;
         }
         else if(dir=='L'){
-            x=1000-x;
-            for(int j=cur_index; j>x; j--){
+            x=cur_index-x;
+            for(int j=cur_index-1; j>=x; j--){
                 array[j]++;
-                //cout << j << " ";
             }
-            //cout << endl;
-            cur_index-=1000-x;
+            cur_index=x;
         }
 
     }
@@ -37,6 +33,6 @@ int main() {
             cnt++;
         }
     }
-    cout << cnt/2;
+    cout << cnt;
     return 0;
 }
