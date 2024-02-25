@@ -16,9 +16,11 @@ int main() {
             arr[i][j]=0;
         }
     }
+    bool exist=false;
     for(int i=0; i<2001; i++){
         for(int j=0; j<2001; j++){
             if(arr[i][j]==1){
+                exist=true;
                 x1=i;
                 y1=j;
                 goto point;
@@ -36,6 +38,9 @@ int main() {
         }
     }
     point2:
-    cout << (x2-x1+1)*(y2-y1+1);
+    if(!exist)
+        cout << 0;
+    else
+        cout << (x2-x1+1)*(y2-y1+1);
     return 0;
 }
