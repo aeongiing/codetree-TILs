@@ -10,13 +10,14 @@ int main() {
     }
     int max = 0;
     for(int i = 1; i < n; i++){
-        int cnt = 0;
+        int cnt = 1;
         while(a[i]==a[i-1]){
             cnt++;
             i++;
         }
-        if(cnt>=max)
-            max=cnt+1;
+        if(cnt>max){
+            max=cnt;
+        }
     }
     cout << max;
     return 0;
