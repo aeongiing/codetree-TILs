@@ -1,4 +1,6 @@
 #include <iostream>
+#include <algorithm>
+
 using namespace std;
 
 int main() {
@@ -36,6 +38,18 @@ int main() {
         }
     }
     point2:
-    cout << (x2-x1)*(y2-y1);
+    int x3=2000, y3=2000;
+    for(int i=0; i<2001; i++){
+        for(int j=0; j<2001; j++){
+            if(arr[i][j]==1){
+                x1=min(x1,i);
+                y1=min(y1,j);
+                x3=max(x3,i);
+                y3=max(y3,j);
+            }
+        }
+    }
+    cout << (x3-x1)*(y3-y1);
+
     return 0;
 }
