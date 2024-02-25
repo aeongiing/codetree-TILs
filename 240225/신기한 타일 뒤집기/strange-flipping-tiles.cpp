@@ -8,8 +8,6 @@ int main() {
     char dir;
 
     int array[201]={};
-    int white_arr[201]={};
-    int black_arr[201]={};
 
     int cur_index=100;
 
@@ -33,7 +31,6 @@ int main() {
     }
     int cnt_white=0;
     int cnt_black=0;
-    int cnt_gray=0;
 
     for(int i=0; i<201; i++){
         if(array[i]==2){
@@ -44,6 +41,5 @@ int main() {
         }
     }
     cout << cnt_white << " " << cnt_black;
-    return 0;
     return 0;
 }
