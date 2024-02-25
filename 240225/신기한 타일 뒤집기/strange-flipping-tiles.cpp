@@ -7,7 +7,7 @@ int main() {
     int x;
     char dir;
 
-    int array[20001]={};
+    int array[200001]={};
 
     int cur_index=100000;
 
@@ -32,7 +32,7 @@ int main() {
     int cnt_white=0;
     int cnt_black=0;
 
-    for(int i=0; i<20001; i++){
+    for(int i=0; i<200001; i++){
         if(array[i]==2){
             cnt_white++;
         }
