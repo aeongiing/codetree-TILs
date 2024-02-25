@@ -19,6 +19,9 @@ int main() {
             max=cnt;
         }
     }
+    if(max==0){
+        max++;
+    }
     cout << max;
     return 0;
 }
