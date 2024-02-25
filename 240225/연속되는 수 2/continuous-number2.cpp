@@ -15,7 +15,7 @@ int main() {
             cnt++;
             i++;
         }
-        if(cnt>max)
+        if(cnt>=max)
             max=cnt+1;
     }
     cout << max;
