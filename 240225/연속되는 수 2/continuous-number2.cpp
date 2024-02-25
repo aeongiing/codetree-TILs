@@ -8,11 +8,16 @@ int main() {
     for(int i=0; i<n; i++){
         cin >> a[i];
     }
-    int cnt = 0;
-    for(int i = 0; i < n; i++)
-        if(i == 0 || a[i] != a[i - 1])
+    int max = 0;
+    for(int i = 1; i < n; i++){
+        int cnt = 0;
+        while(a[i]==a[i-1]){
             cnt++;
-
-    cout << cnt;
+            i++;
+        }
+        if(cnt+1>max)
+            max=cnt+1;
+    }
+    cout << max;
     return 0;
 }
