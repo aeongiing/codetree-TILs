@@ -8,7 +8,7 @@ int main() {
     int b[2000001]={};
     char c;
     int d;
-
+    int total=0;
     int current_a=0;
     for(int i=0; i<n; i++){
         cin >> c >> d;
@@ -23,6 +23,7 @@ int main() {
             }
         }
         current_a+=d;
+        total+=d;
     }
 
     int current_b=0;
@@ -46,8 +47,9 @@ int main() {
             cout << i;
             break;
         }
-        if(i==200001){
+        if(i==total){
             cout << -1;
+            break;
         }
     }
 
