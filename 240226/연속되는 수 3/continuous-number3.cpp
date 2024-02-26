@@ -9,7 +9,7 @@ int main() {
         cin >> arr[i];
     }
     
-    int max=0;
+    int max=1;
     for(int i = 1; i < n; i++){
         int cnt = 1;
         while(arr[i]*arr[i - 1]>0 && i<n){
@@ -20,7 +20,6 @@ int main() {
             max=cnt;
         }
     }
-
     cout << max;
     return 0;
 }
