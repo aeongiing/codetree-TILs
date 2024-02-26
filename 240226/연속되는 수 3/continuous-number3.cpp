@@ -12,9 +12,9 @@ int main() {
     int max=0;
     for(int i = 1; i < n; i++){
         int cnt = 1;
-        while(arr[i]*arr[i - 1]>0){
+        while(arr[i]*arr[i - 1]>0 && i<n){
             cnt++;
-            i++;  
+            i++;
         }
         if(cnt>max){
             max=cnt;
