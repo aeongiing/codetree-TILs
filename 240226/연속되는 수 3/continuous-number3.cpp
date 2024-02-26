@@ -8,13 +8,13 @@ int main() {
     for(int i=0; i<n; i++){
         cin >> arr[i];
     }
-    int cnt = 0;
+    
     int max=0;
     for(int i = 1; i < n; i++){
+        int cnt = 1;
         while(arr[i]*arr[i - 1]>0){
             cnt++;
-            i++;
-            
+            i++;  
         }
         if(cnt>max){
             max=cnt;
