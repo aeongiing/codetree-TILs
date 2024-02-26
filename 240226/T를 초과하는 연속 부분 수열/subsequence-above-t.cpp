@@ -11,7 +11,7 @@ int main() {
     int max=1;
     for(int i=0; i<n; i++){
         int cnt=1;
-        while(arr[i]>t && arr[i]+1==arr[i+1]){
+        while(arr[i]>t && arr[i]+1==arr[i+1] && i<n){
             cnt++;
             i++;
         }
@@ -20,6 +20,6 @@ int main() {
         }
     }
     cout << max;
-    
+
     return 0;
 }
