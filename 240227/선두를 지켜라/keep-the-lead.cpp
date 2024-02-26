@@ -18,7 +18,7 @@ int main() {
         total+=t;
     }
     int current_b=0;
-    for(int i=0; i<n; i++){
+    for(int i=0; i<m; i++){
         cin >> v >> t;
         for(int j=1; j<=t; j++){
             b[current_b+j]=b[current_b+j-1]+v;
